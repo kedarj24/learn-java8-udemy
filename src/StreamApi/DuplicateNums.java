@@ -16,6 +16,14 @@ public class DuplicateNums {
 
         System.out.println(duplicate);
 
-        //Collections.frequency(numbers, e): This method call returns the number of occurrences of the element e in the numbers list.
+       // ********************************************************************************************
+
+        List<Integer> non_duplicate = numbers.stream().filter(e -> Collections.frequency(numbers, e) == 1)
+                .toList();
+
+        System.out.println(non_duplicate);
+
+        //Collections.frequency(numbers, e): This method call returns the number of
+        // occurrences of the element e in the numbers list.
     }
 }
